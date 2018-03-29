@@ -17,14 +17,14 @@ public class AndGate extends Gate{
 	@Override
 	public void connect(int pinIndex, Emitter emitter) {
 		emitters[pinIndex] = emitter;
-	}
-	
-	@Override
-	public boolean read() {
 		nandGate1.connect(0, emitters[0]);
 		nandGate1.connect(1, emitters[1]);
 		nandGate2.connect(0, nandGate1);
 		nandGate2.connect(1, nandGate1);
+	}
+	
+	@Override
+	public boolean read() {
 		return nandGate2.read();
 	}
 
