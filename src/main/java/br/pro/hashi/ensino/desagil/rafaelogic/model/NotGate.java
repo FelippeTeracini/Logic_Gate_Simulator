@@ -7,6 +7,9 @@ public class NotGate extends Gate{
 	
 	public NotGate() {
 		emitters = new Emitter[1];
+		
+		nandGate.connect(0, emitters[0]);
+		nandGate.connect(1, emitters[0]);
 	}
 	
 	@Override
@@ -16,8 +19,6 @@ public class NotGate extends Gate{
 
 	@Override
 	public boolean read() {
-		nandGate.connect(0, emitters[0]);
-		nandGate.connect(1, emitters[0]);
 		return nandGate.read();
 	}
 
