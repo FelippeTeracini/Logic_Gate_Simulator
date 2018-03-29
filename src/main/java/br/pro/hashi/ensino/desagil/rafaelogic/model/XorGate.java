@@ -21,6 +21,11 @@ public class XorGate extends Gate{
 	@Override
 	public void connect(int pinIndex, Emitter emitter) {
 		emitters[pinIndex] = emitter;
+	}
+	
+	@Override
+	public boolean read() {
+		
 		nandGate1.connect(0, emitters[0]);
 		nandGate1.connect(1, emitters[1]);
 		nandGate2.connect(0, emitters[0]);
@@ -29,10 +34,7 @@ public class XorGate extends Gate{
 		nandGate3.connect(1, nandGate1);
 		nandGate4.connect(0, nandGate2);
 		nandGate4.connect(1, nandGate3);
-	}
-	
-	@Override
-	public boolean read() {
+		
 		return nandGate4.read();
 	}
 	

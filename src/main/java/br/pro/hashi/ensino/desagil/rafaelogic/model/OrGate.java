@@ -19,16 +19,18 @@ public class OrGate extends Gate{
 	@Override
 	public void connect(int pinIndex, Emitter emitter) {
 		emitters[pinIndex] = emitter;
+	}
+	
+	@Override
+	public boolean read() {
+		
 		nandGate1.connect(0, emitters[0]);
 		nandGate1.connect(1, emitters[0]);
 		nandGate2.connect(0, emitters[1]);
 		nandGate2.connect(1, emitters[1]);
 		nandGate3.connect(0, nandGate1);
 		nandGate3.connect(1, nandGate2);
-	}
-	
-	@Override
-	public boolean read() {	
+		
 		return nandGate3.read();
 	}
 	
