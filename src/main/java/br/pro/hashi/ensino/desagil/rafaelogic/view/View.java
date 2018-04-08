@@ -46,7 +46,6 @@ public class View extends JPanel implements ActionListener{
 		int index = menu.getSelectedIndex();
 		addGateView(index);
 
-		// Linha necessária para evitar um bug gráfico. Não se preocupe em entendê-la.
 		((JFrame) SwingUtilities.getRoot(this)).pack();
 	}
 	
