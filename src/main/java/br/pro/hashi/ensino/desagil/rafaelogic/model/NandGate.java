@@ -4,6 +4,8 @@ public class NandGate extends Gate {
 	private Emitter[] emitters;
 
 	public NandGate() {
+		super("NAND");
+		
 		emitters = new Emitter[2];
 	}
 
