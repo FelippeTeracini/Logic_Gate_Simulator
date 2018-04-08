@@ -29,7 +29,7 @@ public class GateView extends JPanel implements ActionListener{
 		outBox = new JCheckBox();
 		
 		JLabel inLabel = new JLabel("Entrada");
-		JLabel outLabel = new JLabel("Saída");
+		JLabel outLabel = new JLabel("SaÃ­da");
 		
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
