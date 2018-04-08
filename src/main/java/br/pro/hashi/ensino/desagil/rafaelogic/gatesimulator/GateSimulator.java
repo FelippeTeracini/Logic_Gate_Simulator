@@ -18,7 +18,6 @@ public class GateSimulator {
 			@Override
 			public void run() {
 
-				// Constrói o modelo.
 				LinkedList<Gate> model = new LinkedList<>();
 				model.add(new NotGate());
 				model.add(new NandGate());
@@ -26,10 +25,8 @@ public class GateSimulator {
 				model.add(new AndGate());
 				model.add(new XorGate());
 
-				// Constrói a visão.
 				View view = new View(model);
 
-				// Configuração básica de uma janela Swing, já usada no Projeto 1.
 				JFrame frame = new JFrame();
             	frame.setContentPane(view);
             	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
