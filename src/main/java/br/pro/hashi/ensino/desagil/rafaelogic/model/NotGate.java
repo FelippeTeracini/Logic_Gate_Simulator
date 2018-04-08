@@ -6,7 +6,7 @@ public class NotGate extends Gate{
 	
 	public NotGate() {
 		super("NOT");
-		
+		this.size=1;
 		nandGate = new NandGate();
 	}
 	

@@ -34,7 +34,9 @@ public class GateView extends JPanel implements ActionListener{
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
 		add(inLabel);
-		add(inBox0);
+		if (this.gate.getSize() == 2){
+			add(inBox0);
+		}
 		add(inBox1);
 		add(outLabel);
 		add(outBox);
