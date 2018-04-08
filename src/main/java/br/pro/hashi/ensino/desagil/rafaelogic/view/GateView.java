@@ -8,6 +8,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 
+
 import br.pro.hashi.ensino.desagil.rafaelogic.model.Gate;
 import br.pro.hashi.ensino.desagil.rafaelogic.model.Source;
 
@@ -28,14 +29,14 @@ public class GateView extends JPanel implements ActionListener{
 		inBox1 = new JCheckBox();
 		outBox = new JCheckBox();
 		
-		JLabel inLabel = new JLabel("Entrada");
-		JLabel outLabel = new JLabel("Saída");
+		JLabel inLabel = new JLabel("Entrada:");
+		JLabel outLabel = new JLabel("Saída:");
 		
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-		
 		add(inLabel);
 		if (this.gate.getSize() == 2){
 			add(inBox0);
+			
 		}
 		add(inBox1);
 		add(outLabel);
