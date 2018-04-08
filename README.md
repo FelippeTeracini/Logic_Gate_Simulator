@@ -7,4 +7,4 @@ Felippe Teracini
 Arthur Olga
 
 
-Jose Feranando
+Jose Fernando
