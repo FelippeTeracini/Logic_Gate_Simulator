@@ -18,8 +18,11 @@ import br.pro.hashi.ensino.desagil.rafaelogic.model.Gate;
 import br.pro.hashi.ensino.desagil.rafaelogic.model.Source;
 
 public class GateView extends Panel implements ActionListener, MouseListener{
-
+	
+	
 	private static final long serialVersionUID = 1L;
+	
+	int size_img = 175;
 	
 	private Gate gate;
 	
@@ -41,11 +44,13 @@ public class GateView extends Panel implements ActionListener, MouseListener{
 		inBox0 = new JCheckBox();
 		inBox1 = new JCheckBox();
 		
-		if (this.gate.getSize() == 2){
-			add(inBox0, 10, 75, 25, 25);
-			add(inBox1, 10, 150, 25, 25);
-		} else {
-			add(inBox1, 10, 115, 25, 25);
+		int pos = size_img/ (this.gate.getSize()+1); //Logica de divisao em relação ao numerod e rows
+		int addPos = 275/10; //parte inteira
+		
+		add(inBox0, 10, pos+addPos, 25, 25);
+		
+		if (this.gate.getSize() >= 2){
+			add(inBox1, 10, (pos*2)+addPos, 25, 25);
 		}
 		
 		
