@@ -35,6 +35,7 @@ public class GateView extends Panel implements ActionListener, MouseListener{
 		
 		super(300, 300);
 		
+		
 		this.gate = gate;
 		
 		inBox0 = new JCheckBox();
@@ -42,8 +43,11 @@ public class GateView extends Panel implements ActionListener, MouseListener{
 		
 		if (this.gate.getSize() == 2){
 			add(inBox0, 10, 75, 25, 25);
+			add(inBox1, 10, 150, 25, 25);
+		} else {
+			add(inBox1, 10, 115, 25, 25);
 		}
-		add(inBox1, 10, 150, 25, 25);
+		
 		
 		inBox0.addActionListener(this);
 		inBox1.addActionListener(this);
