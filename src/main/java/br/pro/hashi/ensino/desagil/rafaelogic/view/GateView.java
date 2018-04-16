@@ -47,11 +47,12 @@ public class GateView extends Panel implements ActionListener, MouseListener{
 		int pos = size_img/ (this.gate.getSize()+1); //Logica de divisao em relação ao numerod e rows
 		int addPos = 275/10; //parte inteira
 		
-		add(inBox0, 10, pos+addPos, 25, 25);
 		
 		if (this.gate.getSize() >= 2){
-			add(inBox1, 10, (pos*2)+addPos, 25, 25);
+			add(inBox0, 10, (pos*2)+addPos, 25, 25);
 		}
+		add(inBox1, 10, pos+addPos, 25, 25);
+		
 		
 		
 		inBox0.addActionListener(this);
